@@ -1,0 +1,56 @@
+﻿@*Name: Pushpa Dhakal, Course: C# .NET
+    Code Louisville @ Bellarmine University, Mondays 6:00PM to 8:00PM
+    Spring 2020
+    Instructor: Steve England*@
+
+@model CollegeListOfAmerica.Models.InstituteCampuses_
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Institutes</h4>
+    <hr />
+    @*this will display the columns' names and the datas.*@
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CollegeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CollegeID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CollegeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
